@@ -273,9 +273,9 @@ $number-of-child-buttons: 4;
     #BUTTONS | Animations
 \*------------------------------------*/ 
 
-@import "slidein";
-@import "zoomin";
-@import "fountain";
+@import "_/_slidein";
+@import "_/_zoomin";
+@import "_/_fountain";
 
 /*------------------------------------*\
     #LABELS | base
