@@ -1,11 +1,11 @@
+@mixin effects-zoomin{
+
 /**
  * ZOOM-IN
  * When hovering the main button, the child buttons grow
  * from zero to normal size.
  *
  */
-
-@mixin effects-zoomin{
 
   .mfb-component--tl.mfb-zoomin,
   .mfb-component--tr.mfb-zoomin{

@@ -1,10 +1,11 @@
+@mixin effects-slidein{
+
 /**
  * SLIDE IN + FADE
  * When hovering the main button, the child buttons slide out from beneath
  * the main button while transitioning from transparent to opaque.
  *
  */
- @mixin effects-slidein{
 
   .mfb-component--tl.mfb-slidein,
   .mfb-component--tr.mfb-slidein{

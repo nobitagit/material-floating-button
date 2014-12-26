@@ -201,21 +201,10 @@
     #BUTTONS | Animations
 \*------------------------------------*/
 /**
- * SLIDE IN + FADE
- * When hovering the main button, the child buttons slide out from beneath
- * the main button while transitioning from transparent to opaque.
- *
- */
-/**
  * ZOOM-IN
  * When hovering the main button, the child buttons grow
  * from zero to normal size.
  *
- */
-/**
- * FOUNTAIN
- * When hovering the main button the child buttons
- * jump into view from outside the viewport
  */
 .mfb-component--tl.mfb-zoomin .mfb-component__list li,
 .mfb-component--tr.mfb-zoomin .mfb-component__list li {

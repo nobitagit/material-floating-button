@@ -1,9 +1,10 @@
+@mixin effects-fountain{
+
 /**
  * FOUNTAIN
  * When hovering the main button the child buttons
  * jump into view from outside the viewport
  */
-@mixin effects-fountain{
 
   .mfb-component--tl.mfb-fountain,
   .mfb-component--tr.mfb-fountain{
