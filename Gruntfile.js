@@ -12,7 +12,7 @@ module.exports = function(grunt) {
     sass: {
       base: {
         files: {
-          'src/style.css': 'src/style.scss'          
+          'src/mfb.css': 'src/mfb.scss'          
         }
       }
     },
