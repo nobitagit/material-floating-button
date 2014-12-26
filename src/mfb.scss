@@ -65,6 +65,13 @@ $main-color: #E40A5D;
 // aka the white text
 $bright-text: rgba(255, 255, 255, 0.8);
 
+/* EFFECTS ---------------------------*/
+
+// which effects must be made available in the css
+$effects-zoomin: true;
+$effects-slidein: false;
+$effects-fountain: false;
+
 /* SPEEDS ----------------------------*/
 
 // the speed of the inflation of each button after hovering on the main button
@@ -276,6 +283,17 @@ $number-of-child-buttons: 4;
 @import "_/_slidein";
 @import "_/_zoomin";
 @import "_/_fountain";
+
+// Ugly work-around for this https://github.com/sass/sass/issues/451
+@if $effects-slidein == true {
+  @include effects-slidein;
+}
+@if $effects-zoomin == true {
+  @include effects-zoomin;
+}
+@if $effects-fountain == true {
+  @include effects-fountain;
+}
 
 /*------------------------------------*\
     #LABELS | base
