@@ -2,4 +2,3 @@
 node_modules
 .sass-cache/
 .grunt
-src/_customise.scss

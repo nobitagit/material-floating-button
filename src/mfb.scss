@@ -103,7 +103,10 @@ $labels-padding-horizontal: 10px;
 // how many child buttons does the component have
 $number-of-child-buttons: 4;
 
-@import "_customise";
+/* IMPORT USER-DEFINED OVERRIDES -----*/
+
+@import "../_customise";
+
 /*------------------------------------*\
     #BASE | Raw styles
 \*------------------------------------*/
