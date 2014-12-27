@@ -76,7 +76,7 @@ $bright-text | rgba(255, 255, 255, 0.8) | color of icons and text
 $number-of-child-buttons | 4 | how many child buttons the component supports
 
 #####Effects#####
-**n.b.** - set to true to include the effect styles in the compiled .css file. To actually activate the desiders effect you need to reference the appropriate, corresponding class in the markup.
+**n.b.** - set to true to include the effect styles in the compiled .css file. To actually activate the desired effect you need to reference the corresponding class in the markup (see [here](#html))
 
 Variable name | Default value | Explanation
 --- | --- | ---
