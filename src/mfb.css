@@ -201,6 +201,60 @@
     #BUTTONS | Animations
 \*------------------------------------*/
 /**
+ * SLIDE IN + FADE
+ * When hovering the main button, the child buttons slide out from beneath
+ * the main button while transitioning from transparent to opaque.
+ *
+ */
+.mfb-component--tl.mfb-slidein .mfb-component__list li,
+.mfb-component--tr.mfb-slidein .mfb-component__list li {
+  opacity: 0;
+  transition: all 0.5s; }
+.mfb-component--tl.mfb-slidein:hover .mfb-component__list li,
+.mfb-component--tr.mfb-slidein:hover .mfb-component__list li {
+  opacity: 1; }
+.mfb-component--tl.mfb-slidein:hover .mfb-component__list li:nth-child(1),
+.mfb-component--tr.mfb-slidein:hover .mfb-component__list li:nth-child(1) {
+  -webkit-transform: translateY(70px);
+  transform: translateY(70px); }
+.mfb-component--tl.mfb-slidein:hover .mfb-component__list li:nth-child(2),
+.mfb-component--tr.mfb-slidein:hover .mfb-component__list li:nth-child(2) {
+  -webkit-transform: translateY(140px);
+  transform: translateY(140px); }
+.mfb-component--tl.mfb-slidein:hover .mfb-component__list li:nth-child(3),
+.mfb-component--tr.mfb-slidein:hover .mfb-component__list li:nth-child(3) {
+  -webkit-transform: translateY(210px);
+  transform: translateY(210px); }
+.mfb-component--tl.mfb-slidein:hover .mfb-component__list li:nth-child(4),
+.mfb-component--tr.mfb-slidein:hover .mfb-component__list li:nth-child(4) {
+  -webkit-transform: translateY(280px);
+  transform: translateY(280px); }
+
+.mfb-component--bl.mfb-slidein .mfb-component__list li,
+.mfb-component--br.mfb-slidein .mfb-component__list li {
+  opacity: 0;
+  transition: all 0.5s; }
+.mfb-component--bl.mfb-slidein:hover .mfb-component__list li,
+.mfb-component--br.mfb-slidein:hover .mfb-component__list li {
+  opacity: 1; }
+.mfb-component--bl.mfb-slidein:hover .mfb-component__list li:nth-child(1),
+.mfb-component--br.mfb-slidein:hover .mfb-component__list li:nth-child(1) {
+  -webkit-transform: translateY(-70px);
+  transform: translateY(-70px); }
+.mfb-component--bl.mfb-slidein:hover .mfb-component__list li:nth-child(2),
+.mfb-component--br.mfb-slidein:hover .mfb-component__list li:nth-child(2) {
+  -webkit-transform: translateY(-140px);
+  transform: translateY(-140px); }
+.mfb-component--bl.mfb-slidein:hover .mfb-component__list li:nth-child(3),
+.mfb-component--br.mfb-slidein:hover .mfb-component__list li:nth-child(3) {
+  -webkit-transform: translateY(-210px);
+  transform: translateY(-210px); }
+.mfb-component--bl.mfb-slidein:hover .mfb-component__list li:nth-child(4),
+.mfb-component--br.mfb-slidein:hover .mfb-component__list li:nth-child(4) {
+  -webkit-transform: translateY(-280px);
+  transform: translateY(-280px); }
+
+/**
  * ZOOM-IN
  * When hovering the main button, the child buttons grow
  * from zero to normal size.
@@ -283,6 +337,91 @@
   transition-delay: 0.15s; }
 .mfb-component--bl.mfb-zoomin:hover .mfb-component__list li:nth-child(4),
 .mfb-component--br.mfb-zoomin:hover .mfb-component__list li:nth-child(4) {
+  transform: translateY(-280px) scale(1);
+  transition-delay: 0.2s; }
+
+/**
+ * FOUNTAIN
+ * When hovering the main button the child buttons
+ * jump into view from outside the viewport
+ */
+.mfb-component--tl.mfb-fountain .mfb-component__list li,
+.mfb-component--tr.mfb-fountain .mfb-component__list li {
+  transform: scale(0); }
+.mfb-component--tl.mfb-fountain .mfb-component__list li:nth-child(1),
+.mfb-component--tr.mfb-fountain .mfb-component__list li:nth-child(1) {
+  transform: translateY(-70px) scale(0);
+  transition: all 0.5s;
+  transition-delay: 0.15s; }
+.mfb-component--tl.mfb-fountain .mfb-component__list li:nth-child(2),
+.mfb-component--tr.mfb-fountain .mfb-component__list li:nth-child(2) {
+  transform: translateY(-140px) scale(0);
+  transition: all 0.5s;
+  transition-delay: 0.1s; }
+.mfb-component--tl.mfb-fountain .mfb-component__list li:nth-child(3),
+.mfb-component--tr.mfb-fountain .mfb-component__list li:nth-child(3) {
+  transform: translateY(-210px) scale(0);
+  transition: all 0.5s;
+  transition-delay: 0.05s; }
+.mfb-component--tl.mfb-fountain .mfb-component__list li:nth-child(4),
+.mfb-component--tr.mfb-fountain .mfb-component__list li:nth-child(4) {
+  transform: translateY(-280px) scale(0);
+  transition: all 0.5s;
+  transition-delay: 0s; }
+.mfb-component--tl.mfb-fountain:hover .mfb-component__list li:nth-child(1),
+.mfb-component--tr.mfb-fountain:hover .mfb-component__list li:nth-child(1) {
+  transform: translateY(70px) scale(1);
+  transition-delay: 0.05s; }
+.mfb-component--tl.mfb-fountain:hover .mfb-component__list li:nth-child(2),
+.mfb-component--tr.mfb-fountain:hover .mfb-component__list li:nth-child(2) {
+  transform: translateY(140px) scale(1);
+  transition-delay: 0.1s; }
+.mfb-component--tl.mfb-fountain:hover .mfb-component__list li:nth-child(3),
+.mfb-component--tr.mfb-fountain:hover .mfb-component__list li:nth-child(3) {
+  transform: translateY(210px) scale(1);
+  transition-delay: 0.15s; }
+.mfb-component--tl.mfb-fountain:hover .mfb-component__list li:nth-child(4),
+.mfb-component--tr.mfb-fountain:hover .mfb-component__list li:nth-child(4) {
+  transform: translateY(280px) scale(1);
+  transition-delay: 0.2s; }
+
+.mfb-component--bl.mfb-fountain .mfb-component__list li,
+.mfb-component--br.mfb-fountain .mfb-component__list li {
+  transform: scale(0); }
+.mfb-component--bl.mfb-fountain .mfb-component__list li:nth-child(1),
+.mfb-component--br.mfb-fountain .mfb-component__list li:nth-child(1) {
+  transform: translateY(70px) scale(0);
+  transition: all 0.5s;
+  transition-delay: 0.15s; }
+.mfb-component--bl.mfb-fountain .mfb-component__list li:nth-child(2),
+.mfb-component--br.mfb-fountain .mfb-component__list li:nth-child(2) {
+  transform: translateY(140px) scale(0);
+  transition: all 0.5s;
+  transition-delay: 0.1s; }
+.mfb-component--bl.mfb-fountain .mfb-component__list li:nth-child(3),
+.mfb-component--br.mfb-fountain .mfb-component__list li:nth-child(3) {
+  transform: translateY(210px) scale(0);
+  transition: all 0.5s;
+  transition-delay: 0.05s; }
+.mfb-component--bl.mfb-fountain .mfb-component__list li:nth-child(4),
+.mfb-component--br.mfb-fountain .mfb-component__list li:nth-child(4) {
+  transform: translateY(280px) scale(0);
+  transition: all 0.5s;
+  transition-delay: 0s; }
+.mfb-component--bl.mfb-fountain:hover .mfb-component__list li:nth-child(1),
+.mfb-component--br.mfb-fountain:hover .mfb-component__list li:nth-child(1) {
+  transform: translateY(-70px) scale(1);
+  transition-delay: 0.05s; }
+.mfb-component--bl.mfb-fountain:hover .mfb-component__list li:nth-child(2),
+.mfb-component--br.mfb-fountain:hover .mfb-component__list li:nth-child(2) {
+  transform: translateY(-140px) scale(1);
+  transition-delay: 0.1s; }
+.mfb-component--bl.mfb-fountain:hover .mfb-component__list li:nth-child(3),
+.mfb-component--br.mfb-fountain:hover .mfb-component__list li:nth-child(3) {
+  transform: translateY(-210px) scale(1);
+  transition-delay: 0.15s; }
+.mfb-component--bl.mfb-fountain:hover .mfb-component__list li:nth-child(4),
+.mfb-component--br.mfb-fountain:hover .mfb-component__list li:nth-child(4) {
   transform: translateY(-280px) scale(1);
   transition-delay: 0.2s; }
 

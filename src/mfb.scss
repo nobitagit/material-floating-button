@@ -69,8 +69,8 @@ $bright-text: rgba(255, 255, 255, 0.8);
 
 // which effects must be made available in the css
 $effects-zoomin: true;
-$effects-slidein: false;
-$effects-fountain: false;
+$effects-slidein: true;
+$effects-fountain: true;
 
 /* SPEEDS ----------------------------*/
 
@@ -103,6 +103,7 @@ $labels-padding-horizontal: 10px;
 // how many child buttons does the component have
 $number-of-child-buttons: 4;
 
+@import "_customise";
 /*------------------------------------*\
     #BASE | Raw styles
 \*------------------------------------*/
