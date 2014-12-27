@@ -6,9 +6,7 @@ Material design floating button action implementation.
 Made to be semantic, fast and easy to customize.
 ~~Shamelessly~~ inspired by action buttons from Google Inbox, Evernote and Path.  
 
-See a demo [here](http://nobitagit.github.io/material-floating-button/).
-
-Please note that this is still **very beta**. Docs coming soon, in the meantime please refer to the [showcase](http://nobitagit.github.io/material-floating-button/showcase.html) for code and animations overview.
+See a demo [here](http://nobitagit.github.io/material-floating-button/) and test the available effects in the [showcase](http://nobitagit.github.io/material-floating-button/showcase.html).
 
 Demo icons courtesy of [Ionicons](ionicons.com)
 
