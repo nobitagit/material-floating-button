@@ -227,7 +227,7 @@ $number-of-child-buttons: 4;
   padding: $border-distance;
   margin: -$border-distance;
 }
-.mfb-component:hover{
+[data-mfb-hover]:hover{
   .mfb-component__icon {
     -webkit-transform: scale(1) rotate(0deg);    
     transform: scale(1) rotate(0deg);    
@@ -267,7 +267,7 @@ $number-of-child-buttons: 4;
 .mfb-component__main-icon--active{
   opacity: 0;
 }
-.mfb-component:hover{
+[data-mfb-hover]:hover{
   .mfb-component__main-icon{
     -webkit-transform: scale(1) rotate(0deg);    
     transform: scale(1) rotate(0deg);    
