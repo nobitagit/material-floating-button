@@ -45,7 +45,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');  
 
   // Publish this to live site
-  grunt.registerTask('live', ['gh-pages:live']);
+  grunt.registerTask('live', ['clean:live','gh-pages:live']);
   // Live site dry run: test locally before pushing.
   // In .grunt look for the folder 'check' and see if everything's ok
   grunt.registerTask('livecheck', ['clean:check','gh-pages:check']);
