@@ -18,7 +18,8 @@ module.exports = function(grunt) {
     },
 
     clean: {
-      check: ['.grunt/grunt-gh-pages/gh-pages/check']
+      check: ['.grunt/grunt-gh-pages/gh-pages/check'],
+      live:  ['.grunt/grunt-gh-pages/gh-pages/live']
     },
 
     livePages: ['index.html', 'index.css', 'showcase.html', '*.css', '**/*.map'],
