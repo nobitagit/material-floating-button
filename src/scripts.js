@@ -16,6 +16,7 @@
   for( var i = 0, len = els.length; i < len; i++ ){
     mainButton = els[i].querySelector('.' + mainButtonClass);
     mainButton.addEventListener('click', toggleButton, false);
+    mainButton.addEventListener('touchstart', toggleButton, false); 
   }
 
   function toggleButton(e){
