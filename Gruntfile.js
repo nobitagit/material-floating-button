@@ -22,7 +22,7 @@ module.exports = function(grunt) {
       live:  ['.grunt/grunt-gh-pages/gh-pages/live']
     },
 
-    livePages: ['index.html', 'index.css', 'showcase.html', '*.css', '**/*.map'],
+    livePages: ['index.html', 'index.css', 'showcase.html', '*.css', '**/*.map', 'mfb.js'],
     'gh-pages': {
       options: {
         base: 'src',

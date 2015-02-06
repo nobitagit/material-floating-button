@@ -32,6 +32,14 @@ Use the appropriate html structure (better explained later), for example:
 ```
 Everything should already work fine.
 
+Optionally include the provided `mfb.js` script if you need click/touch support.
+
+```html
+<script src="path/to/js/mfb.js"></script>
+```
+
+For a breakdown on why and when you need to include the script please refer to [Toggling options and touch devices support](#Toggling options and touch devices support).
+
 ###Customising the component###
 ####HTML####
 The basic structure of the component is the following (the customisable classes/attributes are in curly braces):
