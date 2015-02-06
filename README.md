@@ -133,7 +133,7 @@ To add click and touch support (and to support the open/close animation programm
 If you want the menu to appear open at load time, do this instead:
 
 ```html
-<ul class="mfb-component--tl mfb-slidein" data-mfb-click data-mfb-state="closed">
+<ul class="mfb-component--tl mfb-slidein" data-mfb-click data-mfb-state="open">
 ```
 
 #####Hover toggling along with touch support#####
