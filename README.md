@@ -116,24 +116,24 @@ The menu can be customised to be activated either on hover or on click/tap. To a
 
 #####Hover toggling#####
 
-If you're only interested in desktop support and want the menu to be activated on hover you won't need to include any scripts as that animation is CSS-based and included in the stylesheet provided. Just reference the `data-mfb-hover` attribute like so:
+If you're only interested in desktop support and want the menu to be activated on hover you won't need to include any scripts as that animation is CSS-based and included in the stylesheet provided. Just set the `data-mfb-toggle` attribute to `hover` like so:
 
 ```html
-<ul class="mfb-component--tl mfb-slidein" data-mfb-hover>
+<ul class="mfb-component--tl mfb-slidein" data-mfb-toggle="hover">
 ```
 
 #####Click toggling#####
 
-To add click and touch support (and to support the open/close animation programmatically, more on this later) include the `mfb.js` file and reference it in the page. Finally add the `data-mfb-click` attribute along with the initial state you want the menu to appear at load time, using the `data-mfb-state` attribute. An example:
+To add click and touch support (and to support the open/close animation programmatically, more on this later) include the `mfb.js` file and reference it in the page. Finally set the `data-mfb-toggle` attribute to `click`, along with the initial state you want the menu to appear at load time, using the `data-mfb-state` attribute. An example:
 
 ```html
-<ul class="mfb-component--tl mfb-slidein" data-mfb-click data-mfb-state="closed">
+<ul class="mfb-component--tl mfb-slidein" data-mfb-toggle="click" data-mfb-state="closed">
 ```
 
 If you want the menu to appear open at load time, do this instead:
 
 ```html
-<ul class="mfb-component--tl mfb-slidein" data-mfb-click data-mfb-state="open">
+<ul class="mfb-component--tl mfb-slidein" data-mfb-toggle="click" data-mfb-state="open">
 ```
 
 #####Hover toggling along with touch support#####
@@ -146,7 +146,7 @@ Then include the `mfb.js` file, ideally at the bottom of your page.
 Once the scripts are in place just set up a normal button with hover toggling like so:
 
 ```html
-<ul class="mfb-component--tl mfb-slidein" data-mfb-hover>
+<ul class="mfb-component--tl mfb-slidein" data-mfb-toggle="hover">
 ```
 
 The script will take care of changing the behavior when the page is viewed from a touch enabled device.
@@ -163,6 +163,14 @@ Or open it with:
 ```js
 menu.setAttribute('data-mfb-state', 'open');
 ```
+
+##Todos##
+
+-[ ] provide minified script and stylesheet
+-[ ] replace `@extend`s as much as possible from the SCSS to optimize output
+-[ ] more animations
+
+
 
 
 

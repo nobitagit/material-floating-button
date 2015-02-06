@@ -228,7 +228,7 @@ $number-of-child-buttons: 4;
   margin: -$border-distance;
 }
 
-[data-mfb-hover]:hover,
+[data-mfb-toggle="hover"]:hover,
 [data-mfb-state="open"]{
   .mfb-component__icon {
     -webkit-transform: scale(1) rotate(0deg);    
@@ -269,7 +269,7 @@ $number-of-child-buttons: 4;
 .mfb-component__main-icon--active{
   opacity: 0;
 }
-[data-mfb-hover]:hover,
+[data-mfb-toggle="hover"]:hover,
 [data-mfb-state="open"]{
   .mfb-component__main-icon{
     -webkit-transform: scale(1) rotate(0deg);    
@@ -328,7 +328,7 @@ $number-of-child-buttons: 4;
   margin-top: - ($labels-padding-vertical + $labels-font-size / 2);  
   transition: all $label-hover-off; // the label disappears at this speed     
 }
-[data-mfb-hover] [data-mfb-label]:hover:after,
+[data-mfb-toggle="hover"] [data-mfb-label]:hover:after,
 [data-mfb-state="open"] [data-mfb-label]:after{
   content: attr(data-mfb-label);
   opacity: 1;

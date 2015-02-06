@@ -1,6 +1,6 @@
 /**
  * Material floating button
- * By: Nobitagit
+ * By: Nobita
  * Repo and docs: https://github.com/nobitagit/material-floating-button
  *
  * License: MIT
@@ -13,8 +13,9 @@
   /**
    * Some defaults
    */
-  var clickOpt = 'data-mfb-click',
-      hoverOpt = 'data-mfb-hover',
+  var clickOpt = 'click',
+      hoverOpt = 'hover',
+      toggleMethod = 'data-mfb-toggle',
       menuState = 'data-mfb-state',
       isOpen = 'open',
       isClosed = 'closed',
@@ -23,11 +24,11 @@
   /**
    * Internal references
    */
-  var elsToClick,
-      elsToHover,
+  var elemsToClick,
+      elemsToHover,
       mainButton,
       target,
-      toggleMenuState;
+      currentState;
 
   /**
    * For every menu we need to get the main button and attach the appropriate evt.
@@ -40,15 +41,18 @@
   }
 
   /**
-   * Remove the hover attribute and set a click attribute and a default,
+   * Remove the hover option, set a click toggle and a default,
    * initial state of 'closed' to menu that's been targeted.
    */
   function replaceAttrs( elems ){
     for( var i = 0, len = elems.length; i < len; i++ ){
-      elems[i].removeAttribute( hoverOpt );
-      elems[i].setAttribute( clickOpt, '' );
+      elems[i].setAttribute( toggleMethod, clickOpt );
       elems[i].setAttribute( menuState, isClosed );
     }    
+  }
+
+  function getElemsByToggleMethod( selector ){
+    return document.querySelectorAll('[' + toggleMethod + '="' + selector + '"]');
   }
 
   /**
@@ -62,14 +66,14 @@
   function toggleButton( evt ){
 
     target = evt.target;
-    while ( target && !target.hasAttribute(clickOpt) ){
+    while ( target && !target.getAttribute( toggleMethod ) ){
       target = target.parentNode;
       if(!target) { return; }
     }
 
-    toggleMenuState = target.getAttribute( menuState ) === isOpen ? isClosed : isOpen;
+    currentState = target.getAttribute( menuState ) === isOpen ? isClosed : isOpen;
 
-    target.setAttribute(menuState, toggleMenuState);
+    target.setAttribute(menuState, currentState);
    
   }
 
@@ -79,12 +83,12 @@
    * in order to make it usable with tap/click.
    **/
   if ( window.Modernizr && Modernizr.touch ){
-    elsToHover = document.querySelectorAll('[' + hoverOpt + ']');
-    replaceAttrs( elsToHover );
+    elemsToHover = getElemsByToggleMethod( hoverOpt );
+    replaceAttrs( elemsToHover );
   }
 
-  elsToClick = document.querySelectorAll('[' + clickOpt + ']');
+  elemsToClick = getElemsByToggleMethod( clickOpt );
 
-  attachEvt( elsToClick, 'click' );
+  attachEvt( elemsToClick, 'click' );
 
 })( window, document );
