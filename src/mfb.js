@@ -1,3 +1,10 @@
+/**
+ * Material floating button
+ * By: Nobitagit
+ * Repo and docs: https://github.com/nobitagit/material-floating-button
+ *
+ * License: MIT
+ */
 
 ;(function ( window, document, undefined ) {
 
