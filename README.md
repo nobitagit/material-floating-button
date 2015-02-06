@@ -26,7 +26,7 @@ Download the whole repo directly on Github or clone it, (optionally) run `npm in
 Use the appropriate html structure (better explained later), for example:
 
 ```html
-<ul class="mfb-component--tl mfb-slidein">
+<ul class="mfb-component--tl mfb-slidein" data-mfb-hover>
   <!-- the menu content -->
 </ul>
 ```
@@ -34,10 +34,10 @@ Everything should already work fine.
 
 ###Customising the component###
 ####HTML####
-The basic structure of the component is the following (the customisable classes are in curly braces):
+The basic structure of the component is the following (the customisable classes/attributes are in curly braces):
 
 ```html
-<ul class="{{placement-class}} {{effect-class}}">
+<ul class="{{placement-class}} {{effect-class}}" {{hover/click-to-open}} {{menu-state}}>
   <li class="mfb-component__wrap">
     <!-- the main menu button -->
     <a data-mfb-label="{{the label text of the main button}}" class="mfb-component__button--main">
@@ -45,7 +45,7 @@ The basic structure of the component is the following (the customisable classes 
       <i class="mfb-component__main-icon--resting {{icon-class}}"></i>
       <!-- the main button icon visibile when the user is hovering/interacting with the menu -->
       <i class="mfb-component__main-icon--active {{active-icon-class}}"></i>
-    </a>     
+    </a>
     <ul class="mfb-component__list">
       <!-- a child button, repeat as many times as needed -->
       <li>
@@ -53,8 +53,8 @@ The basic structure of the component is the following (the customisable classes 
           <i class="mfb-component__child-icon {{icon-class}}"></i>
         </a>
       </li>
-    </ul>        
-  </li>  
+    </ul>
+  </li>
 </ul>
 ```
 
@@ -101,5 +101,42 @@ $labels-padding-vertical | 4px | top & bottom padding for the labels
 $labels-padding-horizontal | 10px | left & right padding for the labels
 
 You can compile the final css on your own or use the provided, pre-configured Grunt tasks for it. After installing all dependencies (by running `npm install` from the terminal) type `grunt sass` (on time compilation) or `grunt watch-css` (live reload triggered after the scss files are changed).
+
+####Toggling options and touch devices support####
+The menu can be customised to be activated either on hover or on click/tap. To assign the desired toggling method the component provides some attributes to add this functionality in a declarative way right from the markup.
+
+#####Hover toggling#####
+
+If you're only interested in desktop support and want the menu to be activated on hover you won't need to include any scripts as that animation is CSS-based and included in the stylesheet provided. Just reference the `data-mfb-hover` attribute like so:
+
+```html
+<ul class="mfb-component--tl mfb-slidein" data-mfb-hover>
+```
+
+#####Click toggling#####
+
+To add click and touch support (and to support the open/close animation programmatically, more on this later) include the `mfb.js` file and reference it in the page. Finally add the `data-mfb-click` attribute along with the initial state you want the menu to appear at load time, using the `data-mfb-state` attribute. An example:
+
+```html
+<ul class="mfb-component--tl mfb-slidein" data-mfb-click data-mfb-state="closed">
+```
+
+If you want the menu to appear open at load time, do this instead:
+
+```html
+<ul class="mfb-component--tl mfb-slidein" data-mfb-click data-mfb-state="closed">
+```
+
+#####Hover toggling along with touch support#####
+
+If you want the menu to work on hover but need support for touch devices you first need to include Modernizr to detect touch support. If you are alreay using it in your project just make sure that the touch detection is enabled.
+
+If you're not using Modernizr already, just include the provided `modernizr.touch.js` script (look in the `src/lib/` folder) in your `<head>` or get the latest version of this very script right from [here](http://modernizr.com/download/#-touch-teststyles-prefixes). Note that this is a custom build and will only detect for touch support, it's not the full library.
+
+
+
+
+
+
 
 
