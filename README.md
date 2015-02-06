@@ -4,7 +4,7 @@ material-floating-button
 Material design floating button action implementation.
 
 Made to be semantic, fast and easy to customize.
-~~Shamelessly~~ inspired by action buttons from Google Inbox, Evernote and Path.  
+~~Shamelessly~~ inspired by action buttons from Google Inbox, Evernote and Path.
 
 See a demo [here](http://nobitagit.github.io/material-floating-button/) and test the available effects in the [showcase](http://nobitagit.github.io/material-floating-button/showcase.html).
 
@@ -133,7 +133,27 @@ If you want the menu to work on hover but need support for touch devices you fir
 
 If you're not using Modernizr already, just include the provided `modernizr.touch.js` script (look in the `src/lib/` folder) in your `<head>` or get the latest version of this very script right from [here](http://modernizr.com/download/#-touch-teststyles-prefixes). Note that this is a custom build and will only detect for touch support, it's not the full library.
 
+Then include the `mfb.js` file, ideally at the bottom of your page.
+Once the scripts are in place just set up a normal button with hover toggling like so:
 
+```html
+<ul class="mfb-component--tl mfb-slidein" data-mfb-hover>
+```
+
+The script will take care of changing the behavior when the page is viewed from a touch enabled device.
+
+#####Opening/closing the menu programmatically#####
+
+If you need to close the menu after a certain event (or open it without user interaction) you can easily do so just by setting its state to `closed` or `open`. Once you have selected the menu in your desired way just close it like so:
+
+```js
+menu.setAttribute('data-mfb-state', 'closed');
+```
+Or open it with:
+
+```js
+menu.setAttribute('data-mfb-state', 'open');
+```
 
 
 
