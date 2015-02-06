@@ -38,7 +38,7 @@ Optionally include the provided `mfb.js` script if you need click/touch support.
 <script src="path/to/js/mfb.js"></script>
 ```
 
-For a breakdown on why and when you need to include the script please refer to [Toggling options and touch devices support](#Toggling options and touch devices support).
+For a breakdown on why and when you need to include the script please refer to [Toggling options and touch devices support](#Toggling%20options%20and%20touch%20devices%20support).
 
 ###Customising the component###
 ####HTML####
