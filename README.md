@@ -38,7 +38,7 @@ Optionally include the provided `mfb.js` script if you need click/touch support.
 <script src="path/to/js/mfb.js"></script>
 ```
 
-For a breakdown on why and when you need to include the script please refer to [Toggling options and touch devices support](#toggling).
+For a breakdown on why and when you need to include the script please refer to [Toggling options and touch devices support](#toggling-opts).
 
 ###Customising the component###
 ####HTML####
@@ -110,10 +110,10 @@ $labels-padding-horizontal | 10px | left & right padding for the labels
 
 You can compile the final css on your own or use the provided, pre-configured Grunt tasks for it. After installing all dependencies (by running `npm install` from the terminal) type `grunt sass` (on time compilation) or `grunt watch-css` (live reload triggered after the scss files are changed).
 
+<a name="toggling-opts"></a>
 ####Toggling options and touch devices support####
 The menu can be customised to be activated either on hover or on click/tap. To assign the desired toggling method the component provides some attributes to add this functionality in a declarative way right from the markup.
 
-<a name="toggling"></a>
 #####Hover toggling#####
 
 If you're only interested in desktop support and want the menu to be activated on hover you won't need to include any scripts as that animation is CSS-based and included in the stylesheet provided. Just reference the `data-mfb-hover` attribute like so:
