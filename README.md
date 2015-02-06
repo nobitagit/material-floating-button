@@ -38,7 +38,7 @@ Optionally include the provided `mfb.js` script if you need click/touch support.
 <script src="path/to/js/mfb.js"></script>
 ```
 
-For a breakdown on why and when you need to include the script please refer to [Toggling options and touch devices support](#Toggling%20options%20and%20touch%20devices%20support).
+For a breakdown on why and when you need to include the script please refer to [Toggling options and touch devices support](#toggling).
 
 ###Customising the component###
 ####HTML####
@@ -136,7 +136,7 @@ If you want the menu to appear open at load time, do this instead:
 ```
 
 #####Hover toggling along with touch support#####
-
+<a name="toggling"></a>
 If you want the menu to work on hover but need support for touch devices you first need to include Modernizr to detect touch support. If you are alreay using it in your project just make sure that the touch detection is enabled.
 
 If you're not using Modernizr already, just include the provided `modernizr.touch.js` script (look in the `src/lib/` folder) in your `<head>` or get the latest version of this very script right from [here](http://modernizr.com/download/#-touch-teststyles-prefixes). Note that this is a custom build and will only detect for touch support, it's not the full library.
