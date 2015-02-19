@@ -1,4 +1,4 @@
-material-floating-button
+Material Floating Button
 ========================
 
 Material design floating button action implementation.
