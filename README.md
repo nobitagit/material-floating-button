@@ -164,6 +164,9 @@ Or open it with:
 menu.setAttribute('data-mfb-state', 'open');
 ```
 
+##Contributions##
+Contributions are welcome. :)
+
 ##Todos##
 
 - [ ] provide minified script and stylesheet
