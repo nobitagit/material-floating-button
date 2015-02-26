@@ -12,7 +12,7 @@ module.exports = function(grunt) {
     sass: {
       base: {
         files: {
-          'src/mfb.css': 'src/mfb.scss'          
+          'src/mfb.css': 'src/mfb.scss'
         }
       }
     },
@@ -22,12 +22,24 @@ module.exports = function(grunt) {
       live:  ['.grunt/grunt-gh-pages/gh-pages/live']
     },
 
+    cssmin: {
+      target: {
+        files: [{
+          expand: true,
+          cwd: 'src',
+          src: ['mfb.css', '!*.min.css'],
+          dest: 'src',
+          ext: '.min.css'
+        }]
+      }
+    },
+
     livePages: [
-            'index.html', 
-            'index.css', 
-            'showcase.html', 
-            '*.css', 
-            '**/*.map', 
+            'index.html',
+            'index.css',
+            'showcase.html',
+            '*.css',
+            '**/*.map',
             'mfb.js',
             'lib/modernizr.touch.js'],
     'gh-pages': {
@@ -35,21 +47,22 @@ module.exports = function(grunt) {
         base: 'src',
       },
       'live': {
-        src: ['<%= livePages %>'] 
+        src: ['<%= livePages %>']
       },
       'check': {
         options: {
           push: false
         },
-        src: ['<%= livePages %>']      
+        src: ['<%= livePages %>']
       }
-    }    
+    }
   });
 
   grunt.loadNpmTasks('grunt-gh-pages');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-clean');  
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // Publish this to live site
   grunt.registerTask('live', ['clean:live','gh-pages:live']);
