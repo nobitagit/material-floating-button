@@ -202,9 +202,9 @@ $number-of-child-buttons: 4;
     display: block;
     position: absolute;
     top: 0;
-
-    padding: 10px 0;
-    margin: -10px 0;
+    right: ($main_button_size - $child_button_size + 2) / 2;
+    padding: 10px + ($main_button_size - $child_button_size) / 2 0;
+    margin: -(10px + ($main_button_size - $child_button_size) / 2) 0;
   }
 }
 
@@ -265,6 +265,8 @@ $number-of-child-buttons: 4;
 .mfb-component__child-icon,
 .mfb-component__child-icon{
   @extend .mfb-component__icon;
+  line-height: $child_button_size;
+  font-size: 18 / 56 * $child_button_size;
 }
 .mfb-component__main-icon--active{
   opacity: 0;
@@ -343,13 +345,24 @@ $number-of-child-buttons: 4;
     right: 70px;
   }
 }
+.mfb-component--br .mfb-component__list, .mfb-component--tr .mfb-component__list {
+  [data-mfb-label]:after {
+    content: attr(data-mfb-label);
+    right: 70px - ($main_button_size - $child_button_size) / 2;
+  }
+}
 .mfb-component--tl, .mfb-component--bl{
   [data-mfb-label]:after {
     content: attr(data-mfb-label);
     left: 70px;
   }
 }
-
+.mfb-component--tl .mfb-component__list, .mfb-component--bl .mfb-component__list{
+  [data-mfb-label]:after {
+    content: attr(data-mfb-label);
+    left: 70px - ($main_button_size - $child_button_size) / 2;
+  }
+}
 /*------------------------------------*\
     #DEVELOPMENT | In development
 \*------------------------------------*/
