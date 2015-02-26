@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     watch: {
       css: {
         files: '**/*.scss',
-        tasks: ['sass:base']
+        tasks: ['sass:base', 'cssmin']
       }
     },
     sass: {
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
     },
 
     cssmin: {
-      target: {
+      main: {
         files: [{
           expand: true,
           cwd: 'src',
@@ -31,6 +31,14 @@ module.exports = function(grunt) {
           dest: 'src',
           ext: '.min.css'
         }]
+      }
+    },
+
+    uglify: {
+      main: {
+        files: {
+          'src/mfb.min.js': ['src/mfb.js']
+        }
       }
     },
 
@@ -63,6 +71,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // Publish this to live site
   grunt.registerTask('live', ['clean:live','gh-pages:live']);
