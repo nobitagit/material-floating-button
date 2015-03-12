@@ -18,6 +18,7 @@ Demo icons courtesy of [Ionicons](ionicons.com)
 Also available as:
 
 - [Angular directive](https://github.com/nobitagit/ng-material-floating-button)
+- [React Component](https://github.com/nobitagit/react-material-floating-button)
 
 ##How to use##
 ###Basic usage###
