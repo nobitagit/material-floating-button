@@ -21,7 +21,12 @@ Also available as:
 
 ##How to use##
 ###Basic usage###
-Download the whole repo directly on Github or clone it, (optionally) run `npm install` to have access to the configured Grunt tasks if you use them, then reference the basic css styles in your `<head>` like so:
+Clone/download the repo from Github or just use npm:
+```
+npm install mfb --save
+```
+
+(Optionally) run `npm install` to have access to the configured Grunt tasks if you use them, then reference the basic css styles in your `<head>` like so:
 
 ```html
 <link href="path/to/css/mfb.css" rel="stylesheet">
@@ -36,7 +41,7 @@ Use the appropriate html structure (better explained later), for example:
 ```
 Everything should already work fine.
 
-Optionally include the provided `mfb.js` script if you need click/touch support.
+You may or may not want to include the provided `mfb.js` script depending on the need to support click/touch.
 
 ```html
 <script src="path/to/js/mfb.js"></script>
@@ -71,7 +76,7 @@ The basic structure of the component is the following (the customisable classes/
 ```
 
 ####SCSS/CSS####
-Although you can use the provided css as is, it's highly likely that you will want to customise the looks and behavior of the component by changing its underlying css. A number of variables is provided for your convenience in the SASS file. 
+Although you can use the provided css as is, it's highly likely that you will want to customise the looks and behavior of the component by changing its underlying css. A number of variables is provided for your convenience in the SASS file.
 
 The suggested way to tweak them is to leave the `src/mfb.scss` unchanged and instead override its default values from the `_customise.scss` file. This will leave the core file unchanged from the source and you will be able to keep this repo as upstream and pull in any future changes without having to worry about overwriting your changes. An example of this can be found in `_customise-example.scss`.
 
@@ -176,11 +181,3 @@ Contributions are welcome. :)
 - [ ] provide minified script and stylesheet
 - [ ] replace `@extend`s as much as possible from the SCSS to optimize output
 - [ ] more animations
-
-
-
-
-
-
-
-

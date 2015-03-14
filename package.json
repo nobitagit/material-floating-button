@@ -1,7 +1,7 @@
 {
-  "name": "material-button",
-  "version": "0.9.1",
-  "description": "html component for button à la Path and Google Inbox",
+  "name": "mfb",
+  "version": "0.10.0",
+  "description": "html component for a material menu à la Path and Google Inbox",
   "main": "index.html",
   "repository": "https://github.com/nobitagit/material-floating-button",
   "scripts": {
@@ -11,8 +11,10 @@
     "component",
     "material",
     "design",
+    "menu",
     "css"
   ],
+  "bugs": "https://github.com/nobitagit/material-floating-button/issues",
   "author": "Nobita",
   "license": "MIT",
   "devDependencies": {
