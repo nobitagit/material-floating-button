@@ -98,6 +98,14 @@ $labels-padding-vertical: 4px;
 // left & right padding for the labels
 $labels-padding-horizontal: 10px;
 
+/* SPACING ---------------------------*/
+
+// space between buttons
+$button-space: 70px;
+
+// space between button and label
+$button-label-space: 70px;
+
 /* OTHER VARIABLES -------------------*/
 
 // how many child buttons does the component have
@@ -342,25 +350,25 @@ $number-of-child-buttons: 4;
 .mfb-component--br, .mfb-component--tr{
   [data-mfb-label]:after {
     content: attr(data-mfb-label);
-    right: 70px;
+    right: $button-label-space;
   }
 }
 .mfb-component--br .mfb-component__list, .mfb-component--tr .mfb-component__list {
   [data-mfb-label]:after {
     content: attr(data-mfb-label);
-    right: 70px - ($main_button_size - $child_button_size) / 2;
+    right: $button-label-space - ($main_button_size - $child_button_size) / 2;
   }
 }
 .mfb-component--tl, .mfb-component--bl{
   [data-mfb-label]:after {
     content: attr(data-mfb-label);
-    left: 70px;
+    left: $button-label-space;
   }
 }
 .mfb-component--tl .mfb-component__list, .mfb-component--bl .mfb-component__list{
   [data-mfb-label]:after {
     content: attr(data-mfb-label);
-    left: 70px - ($main_button_size - $child_button_size) / 2;
+    left: $button-label-space - ($main_button_size - $child_button_size) / 2;
   }
 }
 /*------------------------------------*\
