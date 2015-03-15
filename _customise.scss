@@ -1,1 +1,35 @@
-// See customise-example.scss for instructions on how to properly use this file.
+/* COLORS ----------------------------*/
+
+// the main/primary color
+$main-color: #F0F0F0;
+// aka the white text
+$bright-text: #003478;
+
+/* SIZES -----------------------------*/
+
+// main button diameter
+$main_button_size: 34px;
+// main button diameter
+$child_button_size:34px;
+// the distance of the main button from the closest corners of the screen
+$border-distance: 5px;
+// font-size for labels
+$labels-font-size: 13px;
+// top & bottom padding for the labels
+$labels-padding-vertical: 4px;
+// left & right padding for the labels
+$labels-padding-horizontal: 4px;
+
+/* SPACING ---------------------------*/
+
+// space between buttons
+$button-space: 40px;
+
+// space between button and label
+$button-label-space: 40px;
+
+/* OTHER VARIABLES -------------------*/
+
+// how many child buttons does the component have
+$number-of-child-buttons: 4;
+

@@ -101,8 +101,7 @@ $labels-padding-horizontal: 10px;
 /* SPACING ---------------------------*/
 
 // space between buttons
-$button-padding: 10px;
-$button-margin: 10px;
+$button-space: 70px;
 
 // space between button and label
 $button-label-space: 70px;
@@ -212,8 +211,8 @@ $number-of-child-buttons: 4;
     position: absolute;
     top: 0;
     right: ($main_button_size - $child_button_size + 2) / 2;
-    padding: $button-padding + ($main_button_size - $child_button_size) / 2 0;
-    margin: -($button-margin + ($main_button_size - $child_button_size) / 2) 0;
+    padding: 10px + ($main_button_size - $child_button_size) / 2 0;
+    margin: -(10px + ($main_button_size - $child_button_size) / 2) 0;
   }
 }
 
