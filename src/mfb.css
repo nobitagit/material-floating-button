@@ -232,23 +232,23 @@
 .mfb-component--tl.mfb-slidein[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(1), .mfb-component--tl.mfb-slidein[data-mfb-state="open"] .mfb-component__list li:nth-child(1),
 .mfb-component--tr.mfb-slidein[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(1),
 .mfb-component--tr.mfb-slidein[data-mfb-state="open"] .mfb-component__list li:nth-child(1) {
-  -webkit-transform: translateY(70px);
-  transform: translateY(70px); }
+  -webkit-transform: translateY(40px);
+  transform: translateY(40px); }
 .mfb-component--tl.mfb-slidein[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(2), .mfb-component--tl.mfb-slidein[data-mfb-state="open"] .mfb-component__list li:nth-child(2),
 .mfb-component--tr.mfb-slidein[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(2),
 .mfb-component--tr.mfb-slidein[data-mfb-state="open"] .mfb-component__list li:nth-child(2) {
-  -webkit-transform: translateY(140px);
-  transform: translateY(140px); }
+  -webkit-transform: translateY(80px);
+  transform: translateY(80px); }
 .mfb-component--tl.mfb-slidein[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(3), .mfb-component--tl.mfb-slidein[data-mfb-state="open"] .mfb-component__list li:nth-child(3),
 .mfb-component--tr.mfb-slidein[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(3),
 .mfb-component--tr.mfb-slidein[data-mfb-state="open"] .mfb-component__list li:nth-child(3) {
-  -webkit-transform: translateY(210px);
-  transform: translateY(210px); }
+  -webkit-transform: translateY(120px);
+  transform: translateY(120px); }
 .mfb-component--tl.mfb-slidein[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(4), .mfb-component--tl.mfb-slidein[data-mfb-state="open"] .mfb-component__list li:nth-child(4),
 .mfb-component--tr.mfb-slidein[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(4),
 .mfb-component--tr.mfb-slidein[data-mfb-state="open"] .mfb-component__list li:nth-child(4) {
-  -webkit-transform: translateY(280px);
-  transform: translateY(280px); }
+  -webkit-transform: translateY(160px);
+  transform: translateY(160px); }
 
 .mfb-component--bl.mfb-slidein .mfb-component__list li,
 .mfb-component--br.mfb-slidein .mfb-component__list li {
@@ -261,23 +261,23 @@
 .mfb-component--bl.mfb-slidein[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(1), .mfb-component--bl.mfb-slidein[data-mfb-state="open"] .mfb-component__list li:nth-child(1),
 .mfb-component--br.mfb-slidein[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(1),
 .mfb-component--br.mfb-slidein[data-mfb-state="open"] .mfb-component__list li:nth-child(1) {
-  -webkit-transform: translateY(-70px);
-  transform: translateY(-70px); }
+  -webkit-transform: translateY(-40px);
+  transform: translateY(-40px); }
 .mfb-component--bl.mfb-slidein[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(2), .mfb-component--bl.mfb-slidein[data-mfb-state="open"] .mfb-component__list li:nth-child(2),
 .mfb-component--br.mfb-slidein[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(2),
 .mfb-component--br.mfb-slidein[data-mfb-state="open"] .mfb-component__list li:nth-child(2) {
-  -webkit-transform: translateY(-140px);
-  transform: translateY(-140px); }
+  -webkit-transform: translateY(-80px);
+  transform: translateY(-80px); }
 .mfb-component--bl.mfb-slidein[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(3), .mfb-component--bl.mfb-slidein[data-mfb-state="open"] .mfb-component__list li:nth-child(3),
 .mfb-component--br.mfb-slidein[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(3),
 .mfb-component--br.mfb-slidein[data-mfb-state="open"] .mfb-component__list li:nth-child(3) {
-  -webkit-transform: translateY(-210px);
-  transform: translateY(-210px); }
+  -webkit-transform: translateY(-120px);
+  transform: translateY(-120px); }
 .mfb-component--bl.mfb-slidein[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(4), .mfb-component--bl.mfb-slidein[data-mfb-state="open"] .mfb-component__list li:nth-child(4),
 .mfb-component--br.mfb-slidein[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(4),
 .mfb-component--br.mfb-slidein[data-mfb-state="open"] .mfb-component__list li:nth-child(4) {
-  -webkit-transform: translateY(-280px);
-  transform: translateY(-280px); }
+  -webkit-transform: translateY(-160px);
+  transform: translateY(-160px); }
 
 /**
  * ZOOM-IN
@@ -402,51 +402,51 @@
   transform: scale(0); }
 .mfb-component--tl.mfb-fountain .mfb-component__list li:nth-child(1),
 .mfb-component--tr.mfb-fountain .mfb-component__list li:nth-child(1) {
-  -webkit-transform: translateY(-70px) scale(0);
-  transform: translateY(-70px) scale(0);
+  -webkit-transform: translateY(-40px) scale(0);
+  transform: translateY(-40px) scale(0);
   transition: all 0.5s;
   transition-delay: 0.15s; }
 .mfb-component--tl.mfb-fountain .mfb-component__list li:nth-child(2),
 .mfb-component--tr.mfb-fountain .mfb-component__list li:nth-child(2) {
-  -webkit-transform: translateY(-140px) scale(0);
-  transform: translateY(-140px) scale(0);
+  -webkit-transform: translateY(-80px) scale(0);
+  transform: translateY(-80px) scale(0);
   transition: all 0.5s;
   transition-delay: 0.1s; }
 .mfb-component--tl.mfb-fountain .mfb-component__list li:nth-child(3),
 .mfb-component--tr.mfb-fountain .mfb-component__list li:nth-child(3) {
-  -webkit-transform: translateY(-210px) scale(0);
-  transform: translateY(-210px) scale(0);
+  -webkit-transform: translateY(-120px) scale(0);
+  transform: translateY(-120px) scale(0);
   transition: all 0.5s;
   transition-delay: 0.05s; }
 .mfb-component--tl.mfb-fountain .mfb-component__list li:nth-child(4),
 .mfb-component--tr.mfb-fountain .mfb-component__list li:nth-child(4) {
-  -webkit-transform: translateY(-280px) scale(0);
-  transform: translateY(-280px) scale(0);
+  -webkit-transform: translateY(-160px) scale(0);
+  transform: translateY(-160px) scale(0);
   transition: all 0.5s;
   transition-delay: 0s; }
 .mfb-component--tl.mfb-fountain[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(1), .mfb-component--tl.mfb-fountain[data-mfb-state="open"] .mfb-component__list li:nth-child(1),
 .mfb-component--tr.mfb-fountain[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(1),
 .mfb-component--tr.mfb-fountain[data-mfb-state="open"] .mfb-component__list li:nth-child(1) {
-  -webkit-transform: translateY(70px) scale(1);
-  transform: translateY(70px) scale(1);
+  -webkit-transform: translateY(40px) scale(1);
+  transform: translateY(40px) scale(1);
   transition-delay: 0.05s; }
 .mfb-component--tl.mfb-fountain[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(2), .mfb-component--tl.mfb-fountain[data-mfb-state="open"] .mfb-component__list li:nth-child(2),
 .mfb-component--tr.mfb-fountain[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(2),
 .mfb-component--tr.mfb-fountain[data-mfb-state="open"] .mfb-component__list li:nth-child(2) {
-  -webkit-transform: translateY(140px) scale(1);
-  transform: translateY(140px) scale(1);
+  -webkit-transform: translateY(80px) scale(1);
+  transform: translateY(80px) scale(1);
   transition-delay: 0.1s; }
 .mfb-component--tl.mfb-fountain[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(3), .mfb-component--tl.mfb-fountain[data-mfb-state="open"] .mfb-component__list li:nth-child(3),
 .mfb-component--tr.mfb-fountain[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(3),
 .mfb-component--tr.mfb-fountain[data-mfb-state="open"] .mfb-component__list li:nth-child(3) {
-  -webkit-transform: translateY(210px) scale(1);
-  transform: translateY(210px) scale(1);
+  -webkit-transform: translateY(120px) scale(1);
+  transform: translateY(120px) scale(1);
   transition-delay: 0.15s; }
 .mfb-component--tl.mfb-fountain[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(4), .mfb-component--tl.mfb-fountain[data-mfb-state="open"] .mfb-component__list li:nth-child(4),
 .mfb-component--tr.mfb-fountain[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(4),
 .mfb-component--tr.mfb-fountain[data-mfb-state="open"] .mfb-component__list li:nth-child(4) {
-  -webkit-transform: translateY(280px) scale(1);
-  transform: translateY(280px) scale(1);
+  -webkit-transform: translateY(160px) scale(1);
+  transform: translateY(160px) scale(1);
   transition-delay: 0.2s; }
 
 .mfb-component--bl.mfb-fountain .mfb-component__list li,
@@ -455,51 +455,51 @@
   transform: scale(0); }
 .mfb-component--bl.mfb-fountain .mfb-component__list li:nth-child(1),
 .mfb-component--br.mfb-fountain .mfb-component__list li:nth-child(1) {
-  -webkit-transform: translateY(70px) scale(0);
-  transform: translateY(70px) scale(0);
+  -webkit-transform: translateY(40px) scale(0);
+  transform: translateY(40px) scale(0);
   transition: all 0.5s;
   transition-delay: 0.15s; }
 .mfb-component--bl.mfb-fountain .mfb-component__list li:nth-child(2),
 .mfb-component--br.mfb-fountain .mfb-component__list li:nth-child(2) {
-  -webkit-transform: translateY(140px) scale(0);
-  transform: translateY(140px) scale(0);
+  -webkit-transform: translateY(80px) scale(0);
+  transform: translateY(80px) scale(0);
   transition: all 0.5s;
   transition-delay: 0.1s; }
 .mfb-component--bl.mfb-fountain .mfb-component__list li:nth-child(3),
 .mfb-component--br.mfb-fountain .mfb-component__list li:nth-child(3) {
-  -webkit-transform: translateY(210px) scale(0);
-  transform: translateY(210px) scale(0);
+  -webkit-transform: translateY(120px) scale(0);
+  transform: translateY(120px) scale(0);
   transition: all 0.5s;
   transition-delay: 0.05s; }
 .mfb-component--bl.mfb-fountain .mfb-component__list li:nth-child(4),
 .mfb-component--br.mfb-fountain .mfb-component__list li:nth-child(4) {
-  -webkit-transform: translateY(280px) scale(0);
-  transform: translateY(280px) scale(0);
+  -webkit-transform: translateY(160px) scale(0);
+  transform: translateY(160px) scale(0);
   transition: all 0.5s;
   transition-delay: 0s; }
 .mfb-component--bl.mfb-fountain[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(1), .mfb-component--bl.mfb-fountain[data-mfb-state="open"] .mfb-component__list li:nth-child(1),
 .mfb-component--br.mfb-fountain[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(1),
 .mfb-component--br.mfb-fountain[data-mfb-state="open"] .mfb-component__list li:nth-child(1) {
-  -webkit-transform: translateY(-70px) scale(1);
-  transform: translateY(-70px) scale(1);
+  -webkit-transform: translateY(-40px) scale(1);
+  transform: translateY(-40px) scale(1);
   transition-delay: 0.05s; }
 .mfb-component--bl.mfb-fountain[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(2), .mfb-component--bl.mfb-fountain[data-mfb-state="open"] .mfb-component__list li:nth-child(2),
 .mfb-component--br.mfb-fountain[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(2),
 .mfb-component--br.mfb-fountain[data-mfb-state="open"] .mfb-component__list li:nth-child(2) {
-  -webkit-transform: translateY(-140px) scale(1);
-  transform: translateY(-140px) scale(1);
+  -webkit-transform: translateY(-80px) scale(1);
+  transform: translateY(-80px) scale(1);
   transition-delay: 0.1s; }
 .mfb-component--bl.mfb-fountain[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(3), .mfb-component--bl.mfb-fountain[data-mfb-state="open"] .mfb-component__list li:nth-child(3),
 .mfb-component--br.mfb-fountain[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(3),
 .mfb-component--br.mfb-fountain[data-mfb-state="open"] .mfb-component__list li:nth-child(3) {
-  -webkit-transform: translateY(-210px) scale(1);
-  transform: translateY(-210px) scale(1);
+  -webkit-transform: translateY(-120px) scale(1);
+  transform: translateY(-120px) scale(1);
   transition-delay: 0.15s; }
 .mfb-component--bl.mfb-fountain[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(4), .mfb-component--bl.mfb-fountain[data-mfb-state="open"] .mfb-component__list li:nth-child(4),
 .mfb-component--br.mfb-fountain[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(4),
 .mfb-component--br.mfb-fountain[data-mfb-state="open"] .mfb-component__list li:nth-child(4) {
-  -webkit-transform: translateY(-280px) scale(1);
-  transform: translateY(-280px) scale(1);
+  -webkit-transform: translateY(-160px) scale(1);
+  transform: translateY(-160px) scale(1);
   transition-delay: 0.2s; }
 
 /*------------------------------------*\
