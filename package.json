@@ -1,12 +1,9 @@
 {
   "name": "mfb",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "description": "html component for a material menu à la Path and Google Inbox",
   "main": "index.html",
   "repository": "https://github.com/nobitagit/material-floating-button",
-  "scripts": {
-    "test": "grunt jasmine"
-  },
   "keywords": [
     "component",
     "material",

@@ -80,11 +80,16 @@ The basic structure of the component is the following (the customisable classes/
 
 Although you can use the provided css as is, it's highly likely that you will want to customise the looks and behavior of the component by changing its underlying css. A number of variables is provided for your convenience in the SASS file.
 
-To tweak them, just set them before `@import` of `src/mfb.scss`, because there are define with `!default` flag in source, if you had set the var before, the value of default will not override your value. This way is cleaner than modifiy package files, mainly if you use **bower**.
+The best way to tweak them is leave the `src/mfb.scss` source as is, import it in your own style sheet and define your custom variables before the `@import` statement right there. For example:
 
-See. [Variable default SASS](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#variable_defaults_)
+```scss
+// your .scss working file
+$main-color: #4991EF;
 
-The alternate way to tweak them is to leave the `src/mfb.scss` unchanged and instead override its default values from the `_customise.scss` file. This will leave the core file unchanged from the source and you will be able to keep this repo as upstream and pull in any future changes without having to worry about overwriting your changes. An example of this can be found in `_customise-example.scss`.
+@import "path/to/src/mfb.scss";
+```
+
+This will leave the core files unchanged from the source. You will then be able to keep this repo as upstream and pull in any future changes without having to worry about overwriting your changes.
 
 Here below is a breakdown of all the variables currently available, along with their defaults.
 
@@ -104,6 +109,8 @@ Variable name | Default value | Explanation
 $effects-zoomin | true | include zoomin styles in the css
 $effects-slidein | true | include slidein styles in the css
 $effects-fountain | true | include fountain styles in the css
+
+As a suggestion, try to only include the animation you're using in production in order to have a lighter css.
 
 #####Speeds#####
 
@@ -179,11 +186,14 @@ Or open it with:
 menu.setAttribute('data-mfb-state', 'open');
 ```
 
-##Contributions##
-Contributions are welcome. :)
+##Contributions?##
+Yes please!
+If you submit a PR please add the relative documentation in this README (if needed) and don't forget to add you name and/or email to the contributors list in the package.json file.
 
 ##Todos##
 
-- [ ] provide minified script and stylesheet
+- [x] provide minified script and stylesheet
 - [ ] replace `@extend`s as much as possible from the SCSS to optimize output
 - [ ] more animations
+- [ ] add to bower
+- [ ] provide more variables/get rid of currently hard-coded values

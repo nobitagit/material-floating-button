@@ -13,9 +13,9 @@
  * Demo styles..........Styles for demo only (consider removing these).
  *
  * #BASE
- * Raw styles.............the very basic component wrapper.
- * Modifiers..............the basic styles dependant on component placement.
- * Debuggers..............the basic styles dependant on component placement.
+ * Raw styles...........The very basic component wrapper.
+ * Modifiers............The basic styles dependant on component placement.
+ * Debuggers............The basic styles dependant on component placement.
  *
  * #BUTTONS
  * Base..................Wrapping and constraining every button.
@@ -25,12 +25,12 @@
  *
  * #LABELS
  * Base..................Wrapping and constraining every label.
- * Modifiers.............styles that depends on state and settings.
+ * Modifiers.............Styles that depends on state and settings.
  * Debuggers.............Styles for development.
  *
  * #DEVELOPMENT
  * In development........These styles are in development and not yet finalised
- * Debuggers..........helper styles and flags for development.
+ * Debuggers.............Helper styles and flags for development.
  */
 
 /*------------------------------------*\
@@ -59,8 +59,11 @@
 \*------------------------------------*/
 
 /**
- * Override can be done with previous definition above this file or with 
- * old ../_customise.scss file.
+ * These variables are the default styles that serve as fallback and can be
+ * easily customised at compile time.
+ * Consider overriding them in your own style sheets rather than editing them
+ * here. Refer to the docs for more info.
+ */
 
 /* COLORS ----------------------------*/
 
@@ -115,10 +118,6 @@ $button-label-space: 70px !default;
 // how many child buttons does the component have
 $number-of-child-buttons: 4 !default;
 
-/* IMPORT USER-DEFINED OVERRIDES -----*/
-
-@import "../_customise";
-
 /*------------------------------------*\
     #BASE | Raw styles
 \*------------------------------------*/
@@ -136,7 +135,7 @@ $number-of-child-buttons: 4 !default;
   position: fixed;
   white-space: nowrap;
   z-index: 30;
-  // this padding is needed really only if the element is an <ul>
+  // this padding is really needed  only if the element is an <ul>
   // otherwise it can probably be ditched.
   padding-left: 0;
   list-style: none;
@@ -221,7 +220,7 @@ $number-of-child-buttons: 4 !default;
 }
 
 /**
- * This is the basic styles for all the icons inside the main button
+ * These are the basic styles for all the icons inside the main button
  */
 .mfb-component__icon{
   position: absolute;
@@ -398,10 +397,3 @@ $number-of-child-buttons: 4 !default;
 /**
  * Apply this class to the html tag when developing the slide-in button
  */
-html.mfb-slide-in{
-  border-top: 5px solid teal;
-}
-
-html.mfb-debug *{
-  border: 1px solid red;
-}
