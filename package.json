@@ -13,10 +13,16 @@
   ],
   "bugs": "https://github.com/nobitagit/material-floating-button/issues",
   "author": "Nobita",
-  "contributors": [{
+  "contributors": [
+    {
     "name": "Maxence Winandy",
     "email": "maxence.winandy@gmail.com"
-  }],
+    },
+    {
+    "name": "Christian Flach",
+    "email": "cmfcmf.flach@gmail.com"
+    }
+  ],
   "license": "MIT",
   "devDependencies": {
     "grunt": "^0.4.5",
