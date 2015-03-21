@@ -281,6 +281,70 @@
   transform: translateY(-280px); }
 
 /**
+ * SLIDE IN SPRING
+ * When hovering the main button, the child buttons slide out from beneath
+ * the main button while transitioning from transparent to opaque.
+ *
+ */
+.mfb-component--tl.mfb-slidein-spring .mfb-component__list li,
+.mfb-component--tr.mfb-slidein-spring .mfb-component__list li {
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+.mfb-component--tl.mfb-slidein-spring[data-mfb-toggle="hover"]:hover .mfb-component__list li, .mfb-component--tl.mfb-slidein-spring[data-mfb-state="open"] .mfb-component__list li,
+.mfb-component--tr.mfb-slidein-spring[data-mfb-toggle="hover"]:hover .mfb-component__list li,
+.mfb-component--tr.mfb-slidein-spring[data-mfb-state="open"] .mfb-component__list li {
+  opacity: 1; }
+.mfb-component--tl.mfb-slidein-spring[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(1), .mfb-component--tl.mfb-slidein-spring[data-mfb-state="open"] .mfb-component__list li:nth-child(1),
+.mfb-component--tr.mfb-slidein-spring[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(1),
+.mfb-component--tr.mfb-slidein-spring[data-mfb-state="open"] .mfb-component__list li:nth-child(1) {
+  -webkit-transform: translateY(70px);
+  transform: translateY(70px); }
+.mfb-component--tl.mfb-slidein-spring[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(2), .mfb-component--tl.mfb-slidein-spring[data-mfb-state="open"] .mfb-component__list li:nth-child(2),
+.mfb-component--tr.mfb-slidein-spring[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(2),
+.mfb-component--tr.mfb-slidein-spring[data-mfb-state="open"] .mfb-component__list li:nth-child(2) {
+  -webkit-transform: translateY(140px);
+  transform: translateY(140px); }
+.mfb-component--tl.mfb-slidein-spring[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(3), .mfb-component--tl.mfb-slidein-spring[data-mfb-state="open"] .mfb-component__list li:nth-child(3),
+.mfb-component--tr.mfb-slidein-spring[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(3),
+.mfb-component--tr.mfb-slidein-spring[data-mfb-state="open"] .mfb-component__list li:nth-child(3) {
+  -webkit-transform: translateY(210px);
+  transform: translateY(210px); }
+.mfb-component--tl.mfb-slidein-spring[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(4), .mfb-component--tl.mfb-slidein-spring[data-mfb-state="open"] .mfb-component__list li:nth-child(4),
+.mfb-component--tr.mfb-slidein-spring[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(4),
+.mfb-component--tr.mfb-slidein-spring[data-mfb-state="open"] .mfb-component__list li:nth-child(4) {
+  -webkit-transform: translateY(280px);
+  transform: translateY(280px); }
+
+.mfb-component--bl.mfb-slidein-spring .mfb-component__list li,
+.mfb-component--br.mfb-slidein-spring .mfb-component__list li {
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+.mfb-component--bl.mfb-slidein-spring[data-mfb-toggle="hover"]:hover .mfb-component__list li, .mfb-component--bl.mfb-slidein-spring[data-mfb-state="open"] .mfb-component__list li,
+.mfb-component--br.mfb-slidein-spring[data-mfb-toggle="hover"]:hover .mfb-component__list li,
+.mfb-component--br.mfb-slidein-spring[data-mfb-state="open"] .mfb-component__list li {
+  opacity: 1; }
+.mfb-component--bl.mfb-slidein-spring[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(1), .mfb-component--bl.mfb-slidein-spring[data-mfb-state="open"] .mfb-component__list li:nth-child(1),
+.mfb-component--br.mfb-slidein-spring[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(1),
+.mfb-component--br.mfb-slidein-spring[data-mfb-state="open"] .mfb-component__list li:nth-child(1) {
+  -webkit-transform: translateY(-70px);
+  transform: translateY(-70px); }
+.mfb-component--bl.mfb-slidein-spring[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(2), .mfb-component--bl.mfb-slidein-spring[data-mfb-state="open"] .mfb-component__list li:nth-child(2),
+.mfb-component--br.mfb-slidein-spring[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(2),
+.mfb-component--br.mfb-slidein-spring[data-mfb-state="open"] .mfb-component__list li:nth-child(2) {
+  -webkit-transform: translateY(-140px);
+  transform: translateY(-140px); }
+.mfb-component--bl.mfb-slidein-spring[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(3), .mfb-component--bl.mfb-slidein-spring[data-mfb-state="open"] .mfb-component__list li:nth-child(3),
+.mfb-component--br.mfb-slidein-spring[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(3),
+.mfb-component--br.mfb-slidein-spring[data-mfb-state="open"] .mfb-component__list li:nth-child(3) {
+  -webkit-transform: translateY(-210px);
+  transform: translateY(-210px); }
+.mfb-component--bl.mfb-slidein-spring[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(4), .mfb-component--bl.mfb-slidein-spring[data-mfb-state="open"] .mfb-component__list li:nth-child(4),
+.mfb-component--br.mfb-slidein-spring[data-mfb-toggle="hover"]:hover .mfb-component__list li:nth-child(4),
+.mfb-component--br.mfb-slidein-spring[data-mfb-state="open"] .mfb-component__list li:nth-child(4) {
+  -webkit-transform: translateY(-280px);
+  transform: translateY(-280px); }
+
+/**
  * ZOOM-IN
  * When hovering the main button, the child buttons grow
  * from zero to normal size.

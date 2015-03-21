@@ -301,12 +301,16 @@ $number-of-child-buttons: 4 !default;
 \*------------------------------------*/
 
 @import "_/_slidein";
+@import "_/_slidein-spring";
 @import "_/_zoomin";
 @import "_/_fountain";
 
 // Ugly work-around for this https://github.com/sass/sass/issues/451
 @if $effects-slidein == true {
   @include effects-slidein;
+}
+@if $effects-slidein == true {
+  @include effects-slidein-spring;
 }
 @if $effects-zoomin == true {
   @include effects-zoomin;
