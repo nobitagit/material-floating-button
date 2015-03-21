@@ -190,9 +190,9 @@ Yes please!
 If you submit a PR please add the relative documentation in this README (if needed) and don't forget to add you name and/or email to the contributors list in the package.json file.
 
 ##Credits##
-Andrey Sitnik's [Easings.net](http://easings.net/) for visualizing animations.
-Demo icons courtesy of [Ionicons](ionicons.com).
-And obviously all the [contributors](https://github.com/nobitagit/material-floating-button/graphs/contributors) to this project.
+- Andrey Sitnik's [Easings.net](http://easings.net/) for visualizing animations.
+- Demo icons courtesy of [Ionicons](ionicons.com).
+- All the [contributors](https://github.com/nobitagit/material-floating-button/graphs/contributors) to this project.
 
 ##Todos##
 
