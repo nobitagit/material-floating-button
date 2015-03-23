@@ -2,15 +2,21 @@
 
 /**
  * SLIDE IN SPRING
- * When hovering the main button, the child buttons slide out from beneath
- * the main button while transitioning from transparent to opaque.
+ * Same as slide-in but with a springy animation.
  *
  */
+
   .mfb-component--tl.mfb-slidein-spring,
   .mfb-component--tr.mfb-slidein-spring{
     .mfb-component__list li{
       opacity: 0;
-      transition: all $slide-speed cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transition: all $slide-speed;
+      transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    @for $i from 1 through $number-of-child-buttons {
+      .mfb-component__list li:nth-child( #{$i} ) {
+        transition-delay: #{$i * 0.05}s;
+      }
     }
     &[data-mfb-toggle="hover"]:hover,
     &[data-mfb-state="open"]{
@@ -21,6 +27,7 @@
         @for $i from 1 through $number-of-child-buttons {
           $distance: $button-space * $i;
           li:nth-child( #{$i} ) {
+            transition-delay: #{$i * 0.05}s;
             -webkit-transform: translateY( $distance );
                     transform: translateY( $distance ); }
         }
@@ -32,7 +39,13 @@
   .mfb-component--br.mfb-slidein-spring{
     .mfb-component__list li{
       opacity: 0;
-      transition: all $slide-speed cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transition: all $slide-speed;
+      transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    @for $i from 1 through $number-of-child-buttons {
+      .mfb-component__list li:nth-child( #{$i} ) {
+        transition-delay: #{$i * 0.05}s;
+      }
     }
     &[data-mfb-toggle="hover"]:hover,
     &[data-mfb-state="open"]{
@@ -42,8 +55,10 @@
         }
         @for $i from 1 through $number-of-child-buttons {
           $distance: -1 * $button-space * $i;
-          li:nth-child( #{$i} ) { -webkit-transform: translateY( $distance );
-                                         transform: translateY( $distance ); }
+          li:nth-child( #{$i} ) {
+            transition-delay: #{$i * 0.05}s;
+            -webkit-transform: translateY( $distance );
+                    transform: translateY( $distance ); }
         }
       }
     }
