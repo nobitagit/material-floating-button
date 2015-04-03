@@ -289,7 +289,7 @@ $number-of-child-buttons: 4 !default;
   .mfb-component__main-icon--resting{
     opacity: 0;
     // don't remove this, needed for ng-mfb downstream repo!
-    position: absolute;
+    position: absolute !important;
   }
   .mfb-component__main-icon--active{
     opacity: 1;
