@@ -99,11 +99,13 @@ $child_button_size: 56px !default;
 // the distance of the main button from the closest corners of the screen
 $border-distance: 25px !default;
 // font-size for labels
-$labels-font-size: 13px !default;
+$labels-font-size: 14px !default;
+// font-weight for labels
+$labels-font-weight: normal !default;
 // top & bottom padding for the labels
-$labels-padding-vertical: 4px !default;
+$labels-padding-vertical: 8px !default;
 // left & right padding for the labels
-$labels-padding-horizontal: 10px !default;
+$labels-padding-horizontal: 8x !default;
 
 /* SPACING ---------------------------*/
 
@@ -334,12 +336,14 @@ $number-of-child-buttons: 4 !default;
   content: attr(data-mfb-label);
   opacity: 0;
   transition: all $label-hover-off;
-  background: rgba(0,0,0, .4);
+  background: rgba(0,0,0,0.54);
   padding: $labels-padding-vertical $labels-padding-horizontal;
   border-radius: 3px;
   color: $bright-text;
   font-size: $labels-font-size;
+  font-weight: $labels-font-weight;
   pointer-events: none;
+  line-height: normal;
   position: absolute;
   top: 50%;
   margin-top: - ($labels-padding-vertical + $labels-font-size / 2);
