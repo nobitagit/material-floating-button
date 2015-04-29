@@ -74,6 +74,7 @@ $button-text-color: #f1f1f1;
 $button-box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28) !default;
 // labels colors
 $label-text-color: rgba(255, 255, 255, 0.8) !default;
+// labels background
 $label-background-color: rgba(0,0,0, .4);
 /* EFFECTS ---------------------------*/
 
@@ -104,7 +105,9 @@ $border-distance: 25px !default;
 // font-size for the icons
 $icons-font-size: 18px !default;
 // font-size for labels
-$labels-font-size: 13px !default;
+$labels-font-size: 14px !default;
+// font-weight for labels
+$labels-font-weight: normal !default;
 // top & bottom padding for the labels
 $labels-padding-vertical: 4px !default;
 // left & right padding for the labels
@@ -342,7 +345,9 @@ $number-of-child-buttons: 4 !default;
   border-radius: 3px;
   color: $label-text-color;
   font-size: $labels-font-size;
+  font-weight: $labels-font-weight;
   pointer-events: none;
+  line-height: normal;
   position: absolute;
   top: 50%;
   margin-top: - ($labels-padding-vertical + $labels-font-size / 2);
