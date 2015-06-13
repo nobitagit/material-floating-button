@@ -69,6 +69,8 @@
 
 // the main/primary color
 $main-color: #E40A5D !default;
+// the child button color
+$child_button_color: #E40A5D !default;
 // button colors
 $button-text-color: #f1f1f1;
 $button-box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28) !default;
@@ -266,6 +268,7 @@ $number-of-child-buttons: 4 !default;
   @extend %mfb-component__button;
   height: $child_button_size;
   width: $child_button_size;
+  background: $child_button_color;
 }
 // the icons for the main button
 .mfb-component__main-icon--active,
