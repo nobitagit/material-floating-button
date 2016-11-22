@@ -1,3 +1,48 @@
+@mixin fountain($distance, $direction){
+
+  .mfb-component__list{
+    li{
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+
+    @for $i from 1 through $number-of-child-buttons {
+      
+      li:nth-child( #{$i} ) { 
+        @if $direction == translateY {
+          -webkit-transform: translateY($distance * $i) scale(0);
+                transform: translateY($distance * $i) scale(0);
+        } @else {
+          -webkit-transform: translateX($distance * $i) scale(0);
+                transform: translateX($distance * $i) scale(0);
+        }
+        
+        transition: all $slide-speed;
+        // this is the delay at which the buttons start disappearing
+        transition-delay: ( $number-of-child-buttons - $i ) * 0.05s;        
+      }          
+    }     
+  }
+  &[data-mfb-toggle="hover"]:hover,
+  &[data-mfb-state="open"]{
+    .mfb-component__list{
+      @for $i from 1 through $number-of-child-buttons {
+        li:nth-child( #{$i} ) { 
+          @if $direction == translateY {
+            -webkit-transform: translateY(-1 * $distance * $i) scale(1);
+                  transform: translateY(-1 * $distance * $i) scale(1);
+          } @else {
+            -webkit-transform: translateX(-1 * $distance * $i) scale(1);
+                  transform: translateX(-1 * $distance * $i) scale(1);
+          }
+          // this is the delay at which the buttons appear          
+          transition-delay: $i * 0.05s;
+        }          
+      }                
+    }
+  }
+}
+
 @mixin effects-fountain{
 
 /**
@@ -6,72 +51,30 @@
  * jump into view from outside the viewport
  */
 
-  .mfb-component--tl.mfb-fountain,
-  .mfb-component--tr.mfb-fountain{
-    .mfb-component__list{
-      li{
-        -webkit-transform: scale(0);
-        transform: scale(0);
-      }
-      @for $i from 1 through $number-of-child-buttons {
-        $distance: -1 * $button-space * $i;
-        li:nth-child( #{$i} ) { 
-          -webkit-transform: translateY($distance) scale(0);
-                  transform: translateY($distance) scale(0);
-          transition: all $slide-speed;
-          // this is the delay at which the buttons start disappearing
-          transition-delay: ( $number-of-child-buttons - $i ) * 0.05s;        
-        }          
-      }     
-    }
-    &[data-mfb-toggle="hover"]:hover,
-    &[data-mfb-state="open"]{
-      .mfb-component__list{
-        @for $i from 1 through $number-of-child-buttons {
-          $distance: $button-space * $i;
-          li:nth-child( #{$i} ) { 
-            -webkit-transform: translateY($distance) scale(1); 
-                    transform: translateY($distance) scale(1); 
-            // this is the delay at which the buttons appear          
-            transition-delay: $i * 0.05s;
-          }          
-        }                
-      }
-    }
-  }
-
   .mfb-component--bl.mfb-fountain,
   .mfb-component--br.mfb-fountain{
-    .mfb-component__list{
-      li{
-        -webkit-transform: scale(0);
-                transform: scale(0);
-      }
-      @for $i from 1 through $number-of-child-buttons {
-        $distance: $button-space * $i;
-        li:nth-child( #{$i} ) { 
-          -webkit-transform: translateY($distance) scale(0);
-                  transform: translateY($distance) scale(0);
-          transition: all $slide-speed;
-          // this is the delay at which the buttons start disappearing
-          transition-delay: ( $number-of-child-buttons - $i ) * 0.05s;        
-        }          
-      }     
-    }
-    &[data-mfb-toggle="hover"]:hover,
-    &[data-mfb-state="open"]{
-      .mfb-component__list{
-        @for $i from 1 through $number-of-child-buttons {
-          $distance: -1 * $button-space * $i;
-          li:nth-child( #{$i} ) { 
-            -webkit-transform: translateY($distance) scale(1); 
-                    transform: translateY($distance) scale(1); 
-            // this is the delay at which the buttons appear          
-            transition-delay: $i * 0.05s;
-          }          
-        }                
-      }
-    }
+    @include fountain($button-space, translateY);
   }
 
+  .mfb-component--tl.mfb-fountain,
+  .mfb-component--tr.mfb-fountain{
+    @include fountain(-1 * $button-space, translateY);
+  }
+
+  @media (max-height: $button-space * $number-of-child-buttons) {
+    // Cheap solution, as there is less space on mobile
+    [data-mfb-label]:after {
+      display: none;
+    }
+
+    .mfb-component--bl.mfb-fountain,
+    .mfb-component--tl.mfb-fountain{
+      @include fountain(-1 * $button-space, translateX);
+    }
+
+    .mfb-component--br.mfb-fountain,
+    .mfb-component--tr.mfb-fountain{
+      @include fountain($button-space, translateX);
+    }
+  }
 }
