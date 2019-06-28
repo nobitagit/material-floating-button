@@ -1,5 +1,4 @@
-Material Floating Button
-========================
+# Material Floating Button
 
 Material design floating button action implementation.
 
@@ -21,6 +20,7 @@ Also available as:
 ##How to use##
 ###Basic usage###
 Clone/download the repo from Github or just use npm:
+
 ```
 npm install mfb --save
 ```
@@ -28,7 +28,7 @@ npm install mfb --save
 (Optionally) run `npm install` to have access to the configured Grunt tasks if you use them, then reference the basic css styles in your `<head>` like so:
 
 ```html
-<link href="path/to/css/mfb.css" rel="stylesheet">
+<link href="path/to/css/mfb.css" rel="stylesheet" />
 ```
 
 Use the appropriate html structure (better explained later), for example:
@@ -38,6 +38,7 @@ Use the appropriate html structure (better explained later), for example:
   <!-- the menu content -->
 </ul>
 ```
+
 Everything should already work fine.
 
 You may or may not want to include the provided `mfb.js` script depending on the need to support click/touch.
@@ -69,6 +70,12 @@ The basic structure of the component is the following (the customisable classes/
           <i class="mfb-component__child-icon {{icon-class}}"></i>
         </a>
       </li>
+      <li>
+        <!-- use show-label-always to always show the data-mfb-label content -->
+				<a  href="link.html" data-mfb-label="{{the label text of the a child button}}" show-label-always class="mfb-component__button--child">
+        	<i class="mfb-component__child-icon fas fa-ban"></i>
+        </a>
+			</li>
     </ul>
   </li>
 </ul>
@@ -82,7 +89,7 @@ The best way to tweak them is leave the `src/mfb.scss` source as is, import it i
 
 ```scss
 // your .scss working file
-$main-color: #4991EF;
+$main-color: #4991ef;
 
 @import "path/to/src/mfb.scss";
 ```
@@ -93,41 +100,41 @@ Here below is a breakdown of all the variables currently available, along with t
 
 #####Basic#####
 
-Variable name | Default value | Explanation
---- | --- | ---
-$main-color | #E40A5D | main/primary color of the component
-$bright-text | rgba(255, 255, 255, 0.8) | color of icons and text
-$number-of-child-buttons | 4 | how many child buttons the component supports
+| Variable name             | Default value            | Explanation                                   |
+| ------------------------- | ------------------------ | --------------------------------------------- |
+| \$main-color              | #E40A5D                  | main/primary color of the component           |
+| \$bright-text             | rgba(255, 255, 255, 0.8) | color of icons and text                       |
+| \$number-of-child-buttons | 4                        | how many child buttons the component supports |
 
 #####Effects#####
 **n.b.** - set to true to include the effect styles in the compiled .css file. To actually activate the desired effect you need to reference the corresponding class in the markup (see [here](#html))
 
-Variable name | Default value
---- | ---
-$effects-zoomin | true
-$effects-slidein | true
-$effects-slidein-spring | true
-$effects-fountain | true
+| Variable name            | Default value |
+| ------------------------ | ------------- |
+| \$effects-zoomin         | true          |
+| \$effects-slidein        | true          |
+| \$effects-slidein-spring | true          |
+| \$effects-fountain       | true          |
 
 As a suggestion, try to only include the animation you're using in production in order to have a much lighter css.
 
 #####Speeds#####
 
-Variable name | Default value | Explanation
---- | --- | ---
-$delay-staggering-inflate | 0.1s | each child button can appear with a slight, more natural delay (set to 0 for no-delay)
-$slide-speed | 0.5s | the child buttons animate at this speed
-$label-hover-off | 0.5s | the child buttons labels fade *in* at this speed
-$label-hover-on | 0.3s | the child buttons labels fade *out* at this speed
+| Variable name              | Default value | Explanation                                                                            |
+| -------------------------- | ------------- | -------------------------------------------------------------------------------------- |
+| \$delay-staggering-inflate | 0.1s          | each child button can appear with a slight, more natural delay (set to 0 for no-delay) |
+| \$slide-speed              | 0.5s          | the child buttons animate at this speed                                                |
+| \$label-hover-off          | 0.5s          | the child buttons labels fade _in_ at this speed                                       |
+| \$label-hover-on           | 0.3s          | the child buttons labels fade _out_ at this speed                                      |
 
 #####Sizes#####
 
-Variable name | Default value | Explanation
---- | --- | ---
-$main_button_size | 25px | the distance of the main button from the closest corners of the screen
-$labels-font-size | 13px |font-size for all labels
-$labels-padding-vertical | 4px | top & bottom padding for the labels
-$labels-padding-horizontal | 10px | left & right padding for the labels
+| Variable name               | Default value | Explanation                                                            |
+| --------------------------- | ------------- | ---------------------------------------------------------------------- |
+| \$main_button_size          | 25px          | the distance of the main button from the closest corners of the screen |
+| \$labels-font-size          | 13px          | font-size for all labels                                               |
+| \$labels-padding-vertical   | 4px           | top & bottom padding for the labels                                    |
+| \$labels-padding-horizontal | 10px          | left & right padding for the labels                                    |
 
 You can compile the final css on your own or use the provided, pre-configured Grunt tasks for it. After installing all dependencies (by running `npm install` from the terminal) type `grunt sass` (on time compilation) or `grunt watch-css` (live reload triggered after the scss files are changed).
 
@@ -140,7 +147,7 @@ The menu can be customised to be activated either on hover or on click/tap. To a
 If you're only interested in desktop support and want the menu to be activated on hover you won't need to include any scripts as that animation is CSS-based and included in the stylesheet provided. Just set the `data-mfb-toggle` attribute to `hover` like so:
 
 ```html
-<ul class="mfb-component--tl mfb-slidein" data-mfb-toggle="hover">
+<ul class="mfb-component--tl mfb-slidein" data-mfb-toggle="hover"></ul>
 ```
 
 #####Click toggling#####
@@ -148,13 +155,21 @@ If you're only interested in desktop support and want the menu to be activated o
 To add click and touch support (and to support the open/close animation programmatically, more on this later) include the `mfb.js` file and reference it in the page. Finally set the `data-mfb-toggle` attribute to `click`, along with the initial state you want the menu to appear at load time, using the `data-mfb-state` attribute. An example:
 
 ```html
-<ul class="mfb-component--tl mfb-slidein" data-mfb-toggle="click" data-mfb-state="closed">
+<ul
+  class="mfb-component--tl mfb-slidein"
+  data-mfb-toggle="click"
+  data-mfb-state="closed"
+></ul>
 ```
 
 If you want the menu to appear open at load time, do this instead:
 
 ```html
-<ul class="mfb-component--tl mfb-slidein" data-mfb-toggle="click" data-mfb-state="open">
+<ul
+  class="mfb-component--tl mfb-slidein"
+  data-mfb-toggle="click"
+  data-mfb-state="open"
+></ul>
 ```
 
 #####Hover toggling along with touch support#####
@@ -167,7 +182,7 @@ Then include the `mfb.js` file, ideally at the bottom of your page.
 Once the scripts are in place just set up a normal button with hover toggling like so:
 
 ```html
-<ul class="mfb-component--tl mfb-slidein" data-mfb-toggle="hover">
+<ul class="mfb-component--tl mfb-slidein" data-mfb-toggle="hover"></ul>
 ```
 
 The script will take care of changing the behavior when the page is viewed from a touch enabled device.
@@ -177,12 +192,13 @@ The script will take care of changing the behavior when the page is viewed from 
 If you need to close the menu after a certain event (or open it without user interaction) you can easily do so just by setting its state to `closed` or `open`. Once you have selected the menu in your desired way just close it like so:
 
 ```js
-menu.setAttribute('data-mfb-state', 'closed');
+menu.setAttribute("data-mfb-state", "closed");
 ```
+
 Or open it with:
 
 ```js
-menu.setAttribute('data-mfb-state', 'open');
+menu.setAttribute("data-mfb-state", "open");
 ```
 
 ##Contributions?##
@@ -190,6 +206,7 @@ Yes please!
 If you submit a PR please add the relative documentation in this README (if needed) and don't forget to add you name and/or email to the contributors list in the package.json file.
 
 ##Credits##
+
 - Andrey Sitnik's [Easings.net](http://easings.net/) for visualizing animations.
 - Demo icons courtesy of [Ionicons](ionicons.com).
 - All the [contributors](https://github.com/nobitagit/material-floating-button/graphs/contributors) to this project.

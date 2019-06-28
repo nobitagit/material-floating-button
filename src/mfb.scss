@@ -68,14 +68,14 @@
 /* COLORS ----------------------------*/
 
 // the main/primary color
-$main-color: #E40A5D !default;
+$main-color: #e40a5d !default;
 // button colors
 $button-text-color: #f1f1f1;
-$button-box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28) !default;
+$button-box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28) !default;
 // labels colors
 $label-text-color: rgba(255, 255, 255, 0.8) !default;
 // labels background
-$label-background-color: rgba(0,0,0, .4);
+$label-background-color: rgba(0, 0, 0, 0.4);
 /* EFFECTS ---------------------------*/
 
 // which effects must be made available in the css
@@ -88,11 +88,11 @@ $effects-fountain: true !default;
 // the speed of the inflation of each button after hovering on the main button
 $delay-staggering-inflate: 0.1s !default;
 // when hovering on the main button the child buttons slide into view
-$slide-speed: .5s !default;
+$slide-speed: 0.5s !default;
 // the labels disappear at this speed on mouse out
-$label-hover-off: .5s !default;
+$label-hover-off: 0.5s !default;
 // the labels appear at this speed on mouse over
-$label-hover-on: .3s !default;
+$label-hover-on: 0.3s !default;
 
 /* SIZES -----------------------------*/
 
@@ -136,7 +136,7 @@ $number-of-child-buttons: 4 !default;
  * options chosen by the user or state of the button.
  */
 
-%mfb-component{
+%mfb-component {
   box-sizing: border-box; // A better box-sizing
   margin: $border-distance;
   position: fixed;
@@ -149,11 +149,12 @@ $number-of-child-buttons: 4 !default;
 
   // make sure that everything inside this component
   // inherits the same box-sizing
-  *, *:before, *:after {
+  *,
+  *:before,
+  *:after {
     box-sizing: inherit;
   }
 }
-
 
 /*------------------------------------*\
     #BASE | Modifiers
@@ -167,29 +168,32 @@ $number-of-child-buttons: 4 !default;
  * 4. Bottom-right: modified by the " --br " suffix.
  */
 
-.mfb-component--tl{
+.mfb-component--tl {
   @extend %mfb-component;
-  left: 0; top: 0;
+  left: 0;
+  top: 0;
 }
-.mfb-component--tr{
+.mfb-component--tr {
   @extend %mfb-component;
-  right: 0; top: 0;
+  right: 0;
+  top: 0;
 }
-.mfb-component--bl{
+.mfb-component--bl {
   @extend %mfb-component;
-  left: 0; bottom: 0;
+  left: 0;
+  bottom: 0;
 }
-.mfb-component--br{
+.mfb-component--br {
   @extend %mfb-component;
-  right: 0; bottom: 0;
+  right: 0;
+  bottom: 0;
 }
-
 
 /*------------------------------------*\
     #BUTTONS | Base
 \*------------------------------------*/
 
-%mfb-component__button{
+%mfb-component__button {
   background-color: $main-color;
   display: inline-block;
   position: relative;
@@ -209,11 +213,11 @@ $number-of-child-buttons: 4 !default;
  * the child buttons.
  *
  */
-.mfb-component__list{
+.mfb-component__list {
   list-style: none;
   margin: 0;
   padding: 0;
-  &>li{
+  & > li {
     display: block;
     position: absolute;
     top: 0;
@@ -226,7 +230,7 @@ $number-of-child-buttons: 4 !default;
 /**
  * These are the basic styles for all the icons inside the main button
  */
-.mfb-component__icon{
+.mfb-component__icon {
   position: absolute;
   font-size: $icons-font-size;
   text-align: center;
@@ -234,7 +238,7 @@ $number-of-child-buttons: 4 !default;
   width: 100%;
 }
 
-.mfb-component__wrap{
+.mfb-component__wrap {
   // this double declaration adds some padding to the main button
   // to expand the area that triggers the hover state. The equal, negative
   // margin evens out the distance form the borders so that the button
@@ -244,60 +248,59 @@ $number-of-child-buttons: 4 !default;
 }
 
 [data-mfb-toggle="hover"]:hover,
-[data-mfb-state="open"]{
+[data-mfb-state="open"] {
   .mfb-component__icon {
     -webkit-transform: scale(1) rotate(0deg);
     transform: scale(1) rotate(0deg);
   }
 }
 
-
 /*------------------------------------*\
     #BUTTONS | Modifiers
 \*------------------------------------*/
 
-.mfb-component__button--main{
+.mfb-component__button--main {
   @extend %mfb-component__button;
   height: $main-button-size;
   width: $main-button-size;
   z-index: 20;
 }
-.mfb-component__button--child{
+.mfb-component__button--child {
   @extend %mfb-component__button;
   height: $child_button_size;
   width: $child_button_size;
 }
 // the icons for the main button
 .mfb-component__main-icon--active,
-.mfb-component__main-icon--resting{
+.mfb-component__main-icon--resting {
   @extend .mfb-component__icon;
   -webkit-transform: scale(1) rotate(360deg);
-          transform: scale(1) rotate(360deg);
-  -webkit-transition: -webkit-transform 150ms cubic-bezier(.4,0,1,1);
-          transition: transform 150ms cubic-bezier(.4,0,1,1);
+  transform: scale(1) rotate(360deg);
+  -webkit-transition: -webkit-transform 150ms cubic-bezier(0.4, 0, 1, 1);
+  transition: transform 150ms cubic-bezier(0.4, 0, 1, 1);
 }
 // the icons for the main button
 .mfb-component__child-icon,
-.mfb-component__child-icon{
+.mfb-component__child-icon {
   @extend .mfb-component__icon;
   line-height: $child_button_size;
   font-size: 18 / 56 * $child_button_size;
 }
-.mfb-component__main-icon--active{
+.mfb-component__main-icon--active {
   opacity: 0;
 }
 [data-mfb-toggle="hover"]:hover,
-[data-mfb-state="open"]{
-  .mfb-component__main-icon{
+[data-mfb-state="open"] {
+  .mfb-component__main-icon {
     -webkit-transform: scale(1) rotate(0deg);
     transform: scale(1) rotate(0deg);
   }
-  .mfb-component__main-icon--resting{
+  .mfb-component__main-icon--resting {
     opacity: 0;
     // don't remove this, needed for ng-mfb downstream repo!
     position: absolute !important;
   }
-  .mfb-component__main-icon--active{
+  .mfb-component__main-icon--active {
     opacity: 1;
   }
 }
@@ -350,11 +353,11 @@ $number-of-child-buttons: 4 !default;
   line-height: normal;
   position: absolute;
   top: 50%;
-  margin-top: - ($labels-padding-vertical + $labels-font-size / 2);
+  margin-top: -($labels-padding-vertical + $labels-font-size / 2);
   transition: all $label-hover-off; // the label disappears at this speed
 }
 [data-mfb-toggle="hover"] [data-mfb-label]:hover:after,
-[data-mfb-state="open"] [data-mfb-label]:after{
+[data-mfb-state="open"] [data-mfb-label]:after {
   content: attr(data-mfb-label);
   opacity: 1;
   transition: all $label-hover-on; // the label appears at this speed
@@ -362,29 +365,37 @@ $number-of-child-buttons: 4 !default;
 /*------------------------------------*\
     #LABELS | Modifiers
 \*------------------------------------*/
-.mfb-component--br, .mfb-component--tr{
+.mfb-component--br,
+.mfb-component--tr {
   [data-mfb-label]:after {
     content: attr(data-mfb-label);
     right: $button-label-space;
   }
 }
-.mfb-component--br .mfb-component__list, .mfb-component--tr .mfb-component__list {
+.mfb-component--br .mfb-component__list,
+.mfb-component--tr .mfb-component__list {
   [data-mfb-label]:after {
     content: attr(data-mfb-label);
     right: $button-label-space - ($main-button-size - $child_button_size) / 2;
   }
 }
-.mfb-component--tl, .mfb-component--bl{
+.mfb-component--tl,
+.mfb-component--bl {
   [data-mfb-label]:after {
     content: attr(data-mfb-label);
     left: $button-label-space;
   }
 }
-.mfb-component--tl .mfb-component__list, .mfb-component--bl .mfb-component__list{
+.mfb-component--tl .mfb-component__list,
+.mfb-component--bl .mfb-component__list {
   [data-mfb-label]:after {
     content: attr(data-mfb-label);
     left: $button-label-space - ($main-button-size - $child_button_size) / 2;
   }
+}
+[show-label-always]:after {
+  content: attr(data-mfb-label);
+  opacity: 1;
 }
 /*------------------------------------*\
     #DEVELOPMENT | In development
@@ -394,8 +405,6 @@ $number-of-child-buttons: 4 !default;
  * When a feature is ready(sh) move these styles to their proper place.
  */
 
-
-
 /*------------------------------------*\
     #DEVELOPMENT | Debuggers
 \*------------------------------------*/
@@ -404,7 +413,6 @@ $number-of-child-buttons: 4 !default;
  * These are mainly helpers for development. They do not have to end up
  * in production but it's handy to keep them when developing.
  */
-
 
 /**
  * Apply this class to the html tag when developing the slide-in button
